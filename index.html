@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Listo10</title>
+    <!--
+      Preload de las 6 fuentes con uso real: sin esto, su descarga no empieza
+      hasta ejecutar el bundle y montar React (cascada HTML→JS→fuentes en
+      serie). Los hashes son de contenido y estables entre exports;
+      scripts/check-preloads.mjs rompe el deploy si alguno deja de existir.
+    -->
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/baloo-2/700Bold/Baloo2_700Bold.f57ab981c1dec25a04bea3cce20ea18c.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/baloo-2/800ExtraBold/Baloo2_800ExtraBold.15e8199eb1b3d423d8642f1837b3a9c4.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/nunito/600SemiBold/Nunito_600SemiBold.b1364260246b29fd9393a1a071f3af61.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/nunito/700Bold/Nunito_700Bold.c133c0b8cd169e7798d0cd239477cf32.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/nunito/800ExtraBold/Nunito_800ExtraBold.2b1bb82750274fc2d1043bf3891cb531.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/nunito/900Black/Nunito_900Black.3ffae19d12dc67269f5cdd8d7a0aaeaf.ttf" />
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       /* These styles make the body full-height */
@@ -32,6 +44,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/listo10-web/_expo/static/js/web/index-786590750427751e40ce98854a7181c0.js" defer></script>
+  <script src="/listo10-web/_expo/static/js/web/index-05ad36cb999dd463dc8a4e73fc983755.js" defer></script>
 </body>
 </html>
