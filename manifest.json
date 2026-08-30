@@ -1,0 +1,32 @@
+{
+  "name": "Listo10",
+  "short_name": "Listo10",
+  "description": "El juego de preguntas para jugar en grupo: 10 respuestas por tarjeta, arriésgate o plántate.",
+  "lang": "es",
+  "start_url": "/listo10-web/",
+  "scope": "/listo10-web/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#F59B18",
+  "background_color": "#FFF6EC",
+  "icons": [
+    {
+      "src": "/listo10-web/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/listo10-web/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/listo10-web/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

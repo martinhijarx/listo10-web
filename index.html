@@ -5,18 +5,30 @@
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Listo10</title>
+    <!-- PWA: manifest + color de la barra del navegador + icono iOS.
+         El service worker (public/sw.js) se registra desde el bundle
+         (src/pwa/registerServiceWorker.ts), solo en producción. -->
+    <link rel="manifest" href="/listo10-web/manifest.json" />
+    <meta name="theme-color" content="#F59B18" />
+    <link rel="apple-touch-icon" href="/listo10-web/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Listo10" />
     <!--
       Preload de las 6 fuentes con uso real: sin esto, su descarga no empieza
       hasta ejecutar el bundle y montar React (cascada HTML→JS→fuentes en
-      serie). Los hashes son de contenido y estables entre exports;
-      scripts/check-preloads.mjs rompe el deploy si alguno deja de existir.
+      serie). Son woff2 subseteados (latin + latin-ext + símbolos de la app)
+      desde assets/fonts/; los hashes son de contenido y estables entre
+      exports; scripts/check-preloads.mjs rompe el deploy si alguno deja de
+      existir.
     -->
-    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/baloo-2/700Bold/Baloo2_700Bold.f57ab981c1dec25a04bea3cce20ea18c.ttf" />
-    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/baloo-2/800ExtraBold/Baloo2_800ExtraBold.15e8199eb1b3d423d8642f1837b3a9c4.ttf" />
-    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/nunito/600SemiBold/Nunito_600SemiBold.b1364260246b29fd9393a1a071f3af61.ttf" />
-    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/nunito/700Bold/Nunito_700Bold.c133c0b8cd169e7798d0cd239477cf32.ttf" />
-    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/nunito/800ExtraBold/Nunito_800ExtraBold.2b1bb82750274fc2d1043bf3891cb531.ttf" />
-    <link rel="preload" as="font" type="font/ttf" crossorigin href="/listo10-web/assets/node_modules/@expo-google-fonts/nunito/900Black/Nunito_900Black.3ffae19d12dc67269f5cdd8d7a0aaeaf.ttf" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/listo10-web/assets/assets/fonts/Baloo2_700Bold.3bfafc53aa7c948fa30e109406247ee1.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/listo10-web/assets/assets/fonts/Baloo2_800ExtraBold.d5b92866e243a95376177e58be5b6659.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/listo10-web/assets/assets/fonts/Nunito_600SemiBold.bd41e0fb96cd05f9ff1a634a8fb03dfa.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/listo10-web/assets/assets/fonts/Nunito_700Bold.70952a70f990add222be9d11db69b6c1.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/listo10-web/assets/assets/fonts/Nunito_800ExtraBold.8cfb139bd1c0ca841d5dcca5992ebe5a.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/listo10-web/assets/assets/fonts/Nunito_900Black.229a4ed2fd5039d3c4c9c2f4ba7dba9d.woff2" />
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       /* These styles make the body full-height */
@@ -44,6 +56,6 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/listo10-web/_expo/static/js/web/index-ebdf12d4960f19da5975b1e7d637fae7.js" defer></script>
+  <script src="/listo10-web/_expo/static/js/web/index-0eb3364ae08d77eafe283469b112bc91.js" defer></script>
 </body>
 </html>
